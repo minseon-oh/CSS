@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{border: 1px solid #333;}
+        .tx1{text-align: center;} /* 가운데정렬 */
+        .tx2{text-align: left;} /* 왼쪽정렬 */
+        .tx3{text-align: right;} /* 오른쪽정렬 */
+        .tx4 img{vertical-align: top;}
+        .tx5 img{vertical-align: middle;}
+        .tx6 img{vertical-align: bottom;}
+
+        /* 기준이되는 요소가 없을 때, 박스의 높이와 동일하게 line-height를 맞춰주면된다 */
+        .box{height: 50px; line-height: 50px; text-align: center;}
+    </style>
+
+</head>
+<body>
+    <!-- 문단정렬: 블럭형태에 적용해야한다
+     -->
+    <p class="tx1">ㅋ</p>
+    <p class="tx2">ㅋ</p>
+    <p class="tx3">ㅋ</p>
+    <p class="tx4">ㅋ<img src="img/css3.png" alt=""></p>
+    <p class="tx5">ㅋ<img src="img/html5.png" alt=""></p>
+    <p class="tx6">ㅋ<img src="img/jquery.png" alt=""></p>
+
+    <p class="box">안녕</p>
+    <p class="box">안녕</p>
+</body>
+</html>
