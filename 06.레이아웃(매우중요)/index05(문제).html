@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box {
+        border: 1px solid #777;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .mid {
+        padding: 20px;
+        border: 1px solid #777;
+        overflow: hidden;
+    }
+    .mid > div {
+        border: 1px solid #777;
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    
+    <div class="box">
+        <div>탑</div>
+        <div class="mid">
+            <div>중간패딩 위아래 20px</div>
+            <div>중간패딩 위아래 20px</div>
+        </div>
+        <div>바텀</div>
+    </div>
+
+</body>
+</html>

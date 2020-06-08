@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    * {padding: 0; margin: 0;}
+    ul, li {list-style: none;}
+
+    header {position: fixed; top: 0; left: 0; width: 100%; z-index: 10;}
+    .logo {text-align: center; background-color: white;}
+    .menu-list {background-color: black; text-align: center;}
+    .menu-list li {display: inline-block; padding: 20px 20px;}
+    .menu-list li:hover {background-color: #555;}
+    .menu-list li a {text-decoration: none; color: white;}
+
+    .side {position: fixed; top: 300px; right: 0; z-index: 5;}
+    .side-list {background-color: #333; text-align: center;}
+    .side-list li {padding: 10px 10px; border-bottom: 1px solid #777;}
+    .side-list li:hover {background-color: #555;}
+    .side-list li a {color: white; text-decoration: none; font-size: x-small;}
+
+    section {background-color: thistle; height: 1000px; margin-top: 161px;}
+</style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="img/bgimg.png">
+        </div>
+        <nav class="menu"> <!-- 메뉴를 나타낼 땐 div보다는 nav사용, ul.li태그 사용 -->
+            <ul class="menu-list">
+                <li><a href="">메뉴</a></li>
+                <li><a href="">메뉴</a></li>
+                <li><a href="">메뉴</a></li>
+                <li><a href="">메뉴</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 사이드메뉴를 사용할 땐 aside -->
+    <aside class="side">
+        <ul class="side-list">
+            <li><a href="">
+                <p>카톡</p>
+                <p>kkk123</p>
+            </a></li>
+            <li><a href="">전화번호</a></li>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴2</a></li>
+        </ul>
+    </aside>
+
+    <section>
+        꺄아아아아아아아아아아아아ㅏ
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0px; padding: 0px;}
+        .list-wrap {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #777;
+            position: relative;
+            padding: 10px;
+        }
+        .list-img {
+            position: absolute; 
+            top: 10px; 
+            left: 10px;
+        }
+        .list-content {
+            padding-left: 65px;
+        }
+        .list-content textarea {
+            width: 100%;
+            height: 56px;
+            box-sizing: border-box; 
+            /* 
+            width+border+padding이 실제 박스 넓이인데,
+            box-sizing: border-box; 을 해줘야 패딩과 보더가 박스크기에 포함되지않음
+            */
+        }
+        .list-control {
+            padding-left: 65px;
+            overflow: hidden;
+        }
+        .list-control .list-input {
+            float: left;
+        }
+        .list-control .list-input input {
+            display: block;
+        }
+        .list-control .button {
+            float: right;
+        }
+
+        .a {
+            width: 50%;
+            min-height: 50px;
+            margin: 0 auto;
+            border: 1px solid #777;
+            position: relative;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .a-img {
+            position: absolute;
+            top: 10px; 
+            left: 10px;
+        }
+        .a-content {
+            float: left;
+            padding-left: 65px;
+        }
+        .a-button {
+            float: right;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="list-wrap">
+
+        <div class="list-img">
+            <img src="img/bgimg.png" height="50">
+        </div>
+
+        <div class="list-content">
+            <textarea placeholder="댓글을 입력하세요"></textarea>
+        </div>
+
+        <div class="list-control">
+            <div class="list-input">
+                <input type="text">
+                <input type="text">
+            </div>
+            <button class="button">등록하기</button>
+        </div>
+
+    </div>
+
+    <div class="a">
+        <div class="a-img">
+            <img src="img/bgimg.png" height="50">
+        </div>
+        <div class="a-content">
+            <h4>제목</h4>
+            내용
+        </div>
+        <div class="a-button">
+            <button>삭제</button>
+            <button>수정</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

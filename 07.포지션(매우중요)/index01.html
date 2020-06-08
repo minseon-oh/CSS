@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0; padding: 0;} /* 전체선택자로 모든 패딩마진 없앰 */
+        .list {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #777;
+        }
+        .content {position: relative;} /* 부모에 position: relative; */
+        p {border: 1px solid #777; height: 100px;}
+        
+        .inner1 {background-color: aqua;}
+        .inner2 {
+            background-color: purple;
+            position: absolute; /* relative 위치 기반 z축으로 떠오른다. 부모에 relative 줘야함 */
+            left: 20px; /* 위치조정을 반드시 해줘야한다 */
+            top: 20px; /* 위치조정을 반드시 해줘야한다 */
+            width: 50px; /* 상자크기 */
+            height: 50px; /* 상자크기 */
+        }
+        .inner3 {background-color: forestgreen;}
+    </style>
+
+
+
+</head>
+<body>
+    
+    <div class="list">
+        <div class="content">
+            <p class="inner1">포지션</p>
+            <p class="inner2">포지션</p>
+            <p class="inner3">포지션</p>
+        </div>
+    </div>
+
+</body>
+</html>
