@@ -1,0 +1,129 @@
+/* ===========인덱스화면============== */
+/* 케러셀 좌우측 버튼 그라데이션 없앰 */
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* 메인베너1 */
+.main-banner1 {
+    background: linear-gradient(90deg,#0c151c 1.3125rem,transparent 1%) 50%,linear-gradient(#0c151c 1.3125rem,transparent 1%) 50%,#263747;
+    background-size: 1.5rem 1.5rem;
+    padding: 6rem 0;
+    color: #fff;
+}
+.banner-cap{
+    text-align: center;
+}
+
+/* ===== 메인상품 화면 ===== */
+/* a태그가 인라인요소여서 이미지를 감싸지 못함. 블럭으로 변경 */
+/* col이 기본적으로 float: left를 가지고있기때문에 부모속성에 overflow: hidden을 줌 */
+.prod-list {overflow: hidden; position: relative;}
+.prod-list, .prod-link {border: 1px solid #333; display: block; text-align: center;}
+.prod-list, .prod-list > li[class*="col-"] {padding: 5px;}
+.prod-link .arrow {
+    position: absolute; 
+    bottom: 15px; 
+    left: 15px; 
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    background-color: #d6d6d6;
+}
+/* 호버시 기능 */
+.prod-link:hover {border-color: #4285F4;}
+.prod-link > .hover{opacity: 0; width: 100px; background-color: #4285F4;}
+.prod-link:hover > .arrow {opacity: 0;}
+.prod-link:hover > .hover {opacity: 1;} /* 링크 호버시에 호버클래스 투명도1 */
+
+/* ===== 상품상세 ===== */
+hr {margin: 0; padding: 0;}
+.datail-img {padding-left: 50px;}
+.datail-content {padding-left: 30px; padding-right: 50px; overflow: hidden;}
+.datail-content > .title {font-size: 25px;}
+.datail-content > .price {font-size: 30px; padding: 10px 0px;}
+.datail-content > .delivery {padding: 10px 0px; color: #777;}
+.datail-content > .total > .left {float: left; font-size: 20px; margin-top: 10px;}
+.datail-content > .total > .right {float: right; font-size: 35px;}
+
+.datail-content > .total {margin-top: 80px;}
+.order > .cart {width: 50%; height: 50px; box-sizing: border-box; float: left;}
+.order > .buy {width: 50%; height: 50px; box-sizing: border-box; float: right;}
+
+.reply-wrap {padding: 15px; background-color: #f5f5f5; border: 1px solid #ddd; position: relative;}
+.reply-wrap .reply-image {position: absolute; top: 15px; left: 15px;}
+.reply-wrap .reply-content {padding-left: 55px;}
+.reply-wrap .reply-content .form-control {resize: vertical; margin-bottom: 5px;}
+.reply-group .reply-input .form-control {width: 180px; margin-bottom: 5px;}
+.reply-group {overflow: hidden;}
+.reply-group .reply-input {float: left;}
+.reply-group button {float: right;}
+
+.reply-content textarea {height: 50px; transition: height 0.5s ease-in-out;}
+.reply-content textarea:focus {height: 150px;}
+
+.reply {padding: 15px; background-color: #f5f5f5; border: 1px solid #ddd; position: relative;}
+.reply-image2 {position: absolute; top: 15px; left: 15px;}
+.reply-content2 {padding-left: 55px; overflow: hidden;}
+.name {float: left;}
+.date {float: left; padding-left: 10px; font-size: small;}
+.delete {float: right; font-size: 10px;}
+.modify {float: right; padding-left: 10px; font-size: 10px;}
+
+/* ===== join ===== */
+.join-form {margin: 0 auto; float: none;} /* 가운데 정렬 */
+.titlebox {
+    width: 250px; 
+    text-align: center; 
+    height: 40px; 
+    line-height: 40px; 
+    margin: 70px auto;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+/* 박스쉐도우: 그림자가 가로로떨어진간격, 세로간격, 흐림정도, 그림자색상 */
+.join-form form {box-shadow: 0px 8px 16px rgba(0,0,0,0.3); padding: 50px;}
+@media(max-width: 767px) {.join-form form {padding: 50px 10px;}}
+
+.form-control {border-radius: 0px;}
+.form-control:focus {border-color: #555;}
+
+/* ===== login ===== */
+.login-form form {box-shadow: 0px 8px 16px rgba(0,0,0,0.3); padding: 50px;}
+@media(max-width: 767px) {.join-form form {padding: 50px 10px;}}
+
+/* ===== mypage ===== */
+.myinfo {margin: 0 auto; float: none;}
+.tab-style {background-color: #607D8B;}
+.tab-style > li.active > a,
+.tab-style > li.active > a:hover,
+.tab-style > li.active > a:focus {background-color: #56707D; border: none; color: #fff;}
+.tab-style > li > a {border: none; border-radius: 0px; margin: 0px;}
+
+.tab-content {margin-top: 30px;}
+.sel {width: 200px;}
+.email input,
+.email select,
+.email div {width: 150px; display: inline-block;}
+
+/* ===== 페이스북 ===== */
+.fb-center {border-left: 1px solid #ddd; border-right: 1px solid #ddd;}
+.fb-reply {background-color: none; border: none; overflow: hidden;}
+.fb-reply .left {float: left;}
+.fb-reply .right {float: right;}
+.fb-board {padding-top: 30px; overflow: hidden;}
+.fb-board .left {float: left;}
+.fb-board .right {padding-left: 10px; float: left;}
+.fb-board2 {clear: both; padding: 20px 0px;}
+.like {padding: 10px 0px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.fb-board3 > div {padding: 10px 30px;}
+.fb-side {padding-top: 20px;}
+@media(max-width: 767px) {
+    .fb-side {display: none;}
+}

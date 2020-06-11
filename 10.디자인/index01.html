@@ -15,52 +15,8 @@
 
     <!-- 가장 아래쪽에 개인디자인을 추가 -->
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        /* 케러셀 좌우측 버튼 그라데이션 없앰 */
-        .carousel-control.left {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .0001) 100%);
-        }
-        .carousel-control.right {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, 0) 100%);
-        }
-
-        /* 메인베너1 */
-        .main-banner1 {
-            background: linear-gradient(90deg,#0c151c 1.3125rem,transparent 1%) 50%,linear-gradient(#0c151c 1.3125rem,transparent 1%) 50%,#263747;
-            background-size: 1.5rem 1.5rem;
-            padding: 6rem 0;
-            color: #fff;
-        }
-        .banner-cap{
-            text-align: center;
-        }
-
-        /* 메인상품 화면 */
-        /* a태그가 인라인요소여서 이미지를 감싸지 못함. 블럭으로 변경 */
-        /* col이 기본적으로 float: left를 가지고있기때문에 부모속성에 overflow: hidden을 줌 */
-        .prod-list {overflow: hidden; position: relative;}
-        .prod-list, .prod-link {border: 1px solid #333; display: block; text-align: center;}
-        .prod-list, .prod-list > li[class*="col-"] {padding: 5px;}
-        .prod-link .arrow {
-            position: absolute; 
-            bottom: 15px; 
-            left: 15px; 
-            display: block;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            color: white;
-            background-color: #d6d6d6;
-        }
-        /* 호버시 기능 */
-        .prod-link:hover {border-color: #4285F4;}
-        .prod-link > .hover{opacity: 0; width: 100px; background-color: #4285F4;}
-        .prod-link:hover > .arrow {opacity: 0;}
-        .prod-link:hover > .hover {opacity: 1;} /* 링크 호버시에 호버클래스 투명도1 */
-
-
-    </style>
 
 </head>
 <body>
@@ -75,7 +31,7 @@
                 </button>
 
                 <!-- 로고를 넣는 영역 -->
-                <a class="navbar-brand" href="#"><img src="img/logo.svg"></a>
+                <a class="navbar-brand" href="#"><img src="img/logo.svg" width="30"></a>
 
               </div>
 

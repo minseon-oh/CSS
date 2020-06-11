@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- 부트스트랩디자인 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    <!-- 제이쿼리추가 (순서중요) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 가장 아래쪽에 개인디자인을 추가 -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <!-- 로고를 넣는 영역 -->
+                <a class="navbar-brand" href="#"><img src="img/logo.svg" width="30"></a>
+
+              </div>
+
+              <!--  네비바 안에 포함되는 컨텐츠 -->
+              <div class="collapse navbar-collapse" id="myNavbar">
+
+                <!-- 좌측메뉴 -->
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+
+                <!-- 우측 드롭다운 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">정보관리</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"> 로그인</span</a></li>
+                            <li><a href="#">Disabled</a></li>
+                            <li><a href="#">Active</a></li>
+                            <li><a href="#">Normal</a></li>
+                        </ul>
+
+                    </li>
+                    </div>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+        
+                <div class="col-xs-12">
+                    <h2>상세보기<small>(예제)</small></h2>
+                    <hr>
+                </div>
+        
+                <div class="col-md-6 col-xs-12">
+        
+                    <div class="datail-img">
+                        <img src="img/detail.jpg">
+                    </div>
+        
+                </div>
+                <div class="col-md-6 col-xs-12">
+        
+                    <div class="datail-content">
+                        <p class="title">
+                            [게릴라특가] 30일체험가능! 벨라페이스 3컬러 LED마스크 눈마사지 겸용/4단계 시간조절/피부홈케어 +사은품까지!
+                        </p>
+                        <hr>
+                        <p class="price">135,000원</p>
+                        <hr>
+                        <p class="delivery">
+                            <b>무료배송</b><br>
+                            <small>상품별배송 ㅣ 택배배송 ㅣ당일출고, 12시 이전 결제 건까지 해당 (주말, 공휴일 제외)</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+        
+                    <div class="datail-content">
+                        <div class="total">
+                            <div class="left">총 상품금액</div>
+                            <div class="right">0원</div>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="col-md-6 col-xs-12">
+        
+                    <div class="datail-content">
+                        <div class="order">
+                            <button class="btn btn-default cart">장바구니</button>
+                            <button class="btn btn-primary buy">구매하기</button>
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 댓글 -->
+    <section>
+        <div class="container">
+
+            <div class="col-xs-12">
+                <form class="reply-wrap">
+                    <div class="reply-image">
+                        <img src="img/profile.png" ali="profile">
+                    </div>
+                    <div class="reply-content">
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+
+                        <div class="reply-group">
+                            <div class="reply-input">
+                                <input type="text" class="form-control" placeholder="아이디">
+                                <input type="text" class="form-control" placeholder="비밀번호">
+                            </div>
+                            <button class="btn btn-primary">등록하기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="reply">
+                    <div class="reply-image2">
+                        <img src="img/profile.png" ali="profile">
+                    </div>
+                    <div class="reply-content2">
+                        <div class="name">홍길동</div>
+                        <div class="date">20/06/10</div>
+                        <div class="modify glyphicon glyphicon-pencil">수정</div>
+                        <div class="delete glyphicon glyphicon-trash">삭제</div>
+                        <br>
+                        <div class="content">댓글입니다</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="footer-menu">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-lg-8 copyright">
+                    <a href="#">
+                    <img src="img/logo.svg" width="30">
+                    </a>
+                    Bootstrap | 대표자 : 홍길동 | E-MAIL : aaa123@gmail.com <br>
+                    개인정보보호책임자 : 홍길동 | KG-ITbank에서 오프라인 강의를 진행합니다 <br>
+                    주소 : 서울시 강남구 <br>
+                    <address>©Bootstrap. ALL RIGHTS RESERVED</address>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
