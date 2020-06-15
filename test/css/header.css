@@ -1,0 +1,63 @@
+ /* 디자인 시작하기전에 웹폰트와 초기화선언 */
+ @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+ * {padding: 0; margin: 0; box-sizing: border-box;}
+ body, html {width: 100%; font-family: 'Merriweather', serif;}
+ img {max-width: 100%; height: auto;}
+ ul, li {list-style: none;}
+ .btn {border-radius: 0px;}
+
+ /* 브라우저별로 고유하게  적용되는 form관련 요소를 제거 */
+ input, textarea, select, button {-moz-appearance: none; -webkit-appearance: none;}
+
+ header {position: fixed; top: 0; left: 0; z-index: 10; width: 100%;}
+ .logo {
+     font-size: 100px; 
+     letter-spacing: 30px; 
+     text-align: center; 
+     background-color: white; 
+     position: relative;
+ }
+ .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    height: 30px;
+ }
+ .navbar .navbar-collapse {
+    text-align: center;
+ }
+ .navbar-inverse .navbar-nav > li > a {
+     color: white;
+ }
+ .navbar-inverse .navbar-nav > li > a:hover,
+ .loginbar a:hover {
+     transition: border 0.3s ease-in-out;
+     padding-bottom: 10px;
+     border-bottom: 4px solid white;
+ }
+ .login {position: absolute; color: #333; top: 10px; right: 10px; overflow: hidden;}
+ .login li {float: left; padding: 10px;}
+ .loginbar hr {display: none;}
+ .loginbar a {
+     display: none; 
+     color: white; 
+     text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+     padding: 10px 0px;
+     line-height: 20px;
+     text-decoration: none;
+ }
+
+ /* 사이드 */
+ .side {position: fixed; top: 300px; right: 0; z-index: 5; width: 150px;}
+ .side-list {background-color: #333; text-align: center;}
+ .side-list li {padding: 10px 10px; border-bottom: 1px solid #777;}
+ .side-list li:hover {background-color: #555;}
+ .side-list li a {color: white; text-decoration: none; font-size: small;}
+
+ @media(max-width: 767px) {
+     .logo {font-size: 50px; letter-spacing: 10px;}
+     .login {display: none;}
+     .loginbar hr {display: block;}
+     .loginbar a {display: block;}
+     .side {width: 100px;}
+     .side-list li a {font-size: x-small;}
+}
