@@ -75,20 +75,23 @@
                         <div class="form-group">
                             <label>아이디</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="아이디는 4~8글자">
+                                <input type="text" class="form-control" placeholder="아이디는 4~8글자" id="id">
                                 <div class="input-group-btn">
                                     <button class="btn btn-info" type="submit">중복확인</button>
                                 </div>
                             </div>
+                            <span class="msgId"></span>
                         </div>
                         
                         <div class="form-group">
                             <label>비밀번호</label>
-                            <input type="password" class="form-control" placeholder="비밀번호는 영문/숫자조합 8~16글자">
+                            <input type="password" class="form-control" placeholder="비밀번호는 영문/숫자조합 8~16글자" id="pw">
+                            <span class="msgPw"></span>
                         </div>
                         <div class="form-group">
                             <label>비밀번호확인</label>
-                            <input type="password" class="form-control" placeholder="비밀번호를 확인해주세요">
+                            <input type="password" class="form-control" placeholder="비밀번호를 확인해주세요" id="pwConfirm">
+                            <span class="msgPwConfirm"></span>
                         </div>
 
                         <div class="form-group">
@@ -161,5 +164,54 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        //아이디
+        var id = document.getElementById("id");
+        var msgId = document.querySelector(".msgId");
+        id.onkeyup = function(){
+            //정규표현식
+            var regex = /^[A-Za-z0-9+]{4,8}$/;
+            if(regex.test(id.value)){ //일치하는경우
+                id.style.borderColor = "green";
+                msgId.innerHTML = "사용가능하다";
+            }else{ //사용불가능
+                id.style.borderColor = "red";
+                msgId.innerHTML = "";
+            }
+        }
+
+        //비밀번호
+        var pw = document.getElementById("pw");
+        var msgPw = document.querySelector(".msgPw");
+        pw.onkeyup = function(){
+            var regex = /^.*(?=.{8,16})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
+            if(regex.test(pw.value)){//형식검사에 일치하는경우
+                pw.style.borderColor = "green";
+                msgPw.innerHTML = "사용가능합니다";
+            }else{//형식에 일치하지않는 경우
+                pw.style.borderColor = "red";
+                msgPw.innerHTML = "";
+            }
+
+        }
+
+        //비밀번호확인
+        var msgPwConfirm = document.querySelector(".msgPwConfirm");
+        var pwConfirm = document.getElementById("pwConfirm");
+        pwConfirm.onkeyup = function(){
+            if(pwConfirm.value == pw.value){
+                pwConfirm.style.borderColor = "green";
+                msgPwConfirm.innerHTML = "";
+            }else{
+                pwConfirm.style.borderColor = "red";
+                msgPwConfirm.innerHTML = "비밀번호를 확인하세요";
+            }
+        }
+
+    </script>
+
+
+
 </body>
 </html>
